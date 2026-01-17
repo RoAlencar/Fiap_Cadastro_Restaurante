@@ -12,8 +12,8 @@ services:
       - "5432:5432"             # mapeia a porta para localhost
     volumes:
       - ./init:/docker-entrypoint-initdb.d
-      - postgres-data:/var/lib/postgresql/data
+      - postgres-restaurante-data:/var/lib/postgresql/data
     restart: unless-stopped
 
 volumes:
-  postgres-data:
+  postgres-restaurante-data:
