@@ -3,6 +3,7 @@ package br.com.fiap.app.restaurante.application.dto.request;
 
 import br.com.fiap.app.restaurante.domain.Endereco;
 import br.com.fiap.app.restaurante.domain.HorarioFuncionamento;
+import br.com.fiap.app.restaurante.domain.Restaurante;
 import br.com.fiap.app.restaurante.domain.enums.TipoRestaurante;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,4 +23,12 @@ public class CriarRestauranteDto {
     private HorarioFuncionamento horarioFuncionamento;
     private String donoRestaurante;
     private TipoRestaurante tipoRestaurante;
+
+    public CriarRestauranteDto(CriarRestauranteDto restaurante) {
+        this.nome = restaurante.getNome();
+        this.endereco = restaurante.getEndereco();
+        this.horarioFuncionamento = restaurante.getHorarioFuncionamento();
+        this.donoRestaurante = restaurante.getDonoRestaurante();
+        this.tipoRestaurante = restaurante.getTipoRestaurante();
+    }
 }

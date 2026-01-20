@@ -32,7 +32,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -56,7 +55,7 @@ public class RegistroRestauranteController {
     public ResponseEntity<List<BuscaRestauranteResponse>> buscaRestaurantePorNome(@PathVariable String name)
             throws RestauranteNotFoundException {
         log.info("[Restaurante - Busca por Nome do Restaurante] Iniciando Processo");
-        List<BuscaRestauranteResponse>  buscaRestauranteResponseDto = buscaRestauranteUseCase.buscaRestaurantePorNome(name);
+        List<BuscaRestauranteResponse> buscaRestauranteResponseDto = buscaRestauranteUseCase.buscaRestaurantePorNome(name);
         return new ResponseEntity<>(buscaRestauranteResponseDto, HttpStatus.OK);
     }
 

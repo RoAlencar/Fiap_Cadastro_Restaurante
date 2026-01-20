@@ -24,10 +24,10 @@ public class AtualizaRestauranteDto {
     private TipoRestaurante tipoRestaurante;
 
     public AtualizaRestauranteDto(AtualizaRestauranteDto atualizaRestauranteDto) {
-        this.nome = atualizaRestauranteDto.nome;
-        this.endereco = atualizaRestauranteDto.endereco;;
-        this.horarioFuncionamento = atualizaRestauranteDto.horarioFuncionamento;
-        this.donoRestaurante = atualizaRestauranteDto.donoRestaurante;
-        this.tipoRestaurante = atualizaRestauranteDto.tipoRestaurante;
+        this.nome = atualizaRestauranteDto.getNome();
+        this.endereco = atualizaRestauranteDto.getEndereco();;
+        this.horarioFuncionamento = atualizaRestauranteDto.getHorarioFuncionamento();
+        this.donoRestaurante = atualizaRestauranteDto.getDonoRestaurante();
+        this.tipoRestaurante = atualizaRestauranteDto.getTipoRestaurante();
     }
 }

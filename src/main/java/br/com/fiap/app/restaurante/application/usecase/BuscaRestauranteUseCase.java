@@ -5,6 +5,7 @@ import br.com.fiap.app.restaurante.application.port.BuscaRestauranteUseCasePort;
 import br.com.fiap.app.restaurante.application.port.RestauranteRepositoryPort;
 import br.com.fiap.app.restaurante.domain.Restaurante;
 import br.com.fiap.app.restaurante.infrastructure.exception.custom.RestauranteNotFoundException;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Service
-@RequestMapping
+@RequiredArgsConstructor
 public class BuscaRestauranteUseCase implements BuscaRestauranteUseCasePort {
 
-    private RestauranteRepositoryPort restauranteRepositoryPort;
-    private ModelMapper modelMapper;
+    private final RestauranteRepositoryPort restauranteRepositoryPort;
+    private final ModelMapper modelMapper;
 
 
     @Override
