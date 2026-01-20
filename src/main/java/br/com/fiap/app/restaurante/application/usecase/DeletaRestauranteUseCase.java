@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class DeletaUsuarioUseCase implements DeletaRestauranteUseCasePort {
+public class DeletaRestauranteUseCase implements DeletaRestauranteUseCasePort {
 
     private final RestauranteRepositoryPort restauranteRepositoryPort;
 
