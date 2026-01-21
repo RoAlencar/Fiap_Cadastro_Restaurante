@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "f14ad567-d536-4995-81dc-2262d15bc3cf",
+		"name": "Cadastra Restaurante API",
+		"description": "API para cadastro e gerenciamento de estabelecimentos do sistema de gestão de restuarantes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10199583"
+	},
+	"item": [
+		{
+			"name": "app",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "restaurantes",
+							"item": [
+								{
+									"name": "{name}",
+									"item": [
+										{
+											"name": "busca Restaurante Por Nome",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/app/v1/restaurantes/:name",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"app",
+														"v1",
+														"restaurantes",
+														":name"
+													],
+													"variable": [
+														{
+															"key": "name",
+															"value": "string"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/app/v1/restaurantes/:name",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"app",
+																"v1",
+																"restaurantes",
+																":name"
+															],
+															"variable": [
+																{
+																	"key": "name"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "[\n  {\n    \"id\": 5074,\n    \"nome\": \"string\",\n    \"endereco\": {\n      \"logradouro\": \"string\",\n      \"numero\": \"string\",\n      \"complemento\": \"string\",\n      \"cidade\": \"string\",\n      \"cep\": \"string\"\n    },\n    \"horarioFuncionamento\": {\n      \"abertura\": \"10:28:04.714Z\",\n      \"fechamento\": \"13:21:45.191Z\"\n    },\n    \"donoRestaurante\": \"string\",\n    \"tipoRestaurante\": \"PADARIA\"\n  },\n  {\n    \"id\": 5267,\n    \"nome\": \"string\",\n    \"endereco\": {\n      \"logradouro\": \"string\",\n      \"numero\": \"string\",\n      \"complemento\": \"string\",\n      \"cidade\": \"string\",\n      \"cep\": \"string\"\n    },\n    \"horarioFuncionamento\": {\n      \"abertura\": \"10:01:27.234Z\",\n      \"fechamento\": \"01:40:03.205Z\"\n    },\n    \"donoRestaurante\": \"string\",\n    \"tipoRestaurante\": \"PADARIA\"\n  }\n]"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "deleta Restaurante",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/app/v1/restaurantes/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"app",
+														"v1",
+														"restaurantes",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "509"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/app/v1/restaurantes/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"app",
+																"v1",
+																"restaurantes",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "busca Todos Restaurantes",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/app/v1/restaurantes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"app",
+												"v1",
+												"restaurantes"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/app/v1/restaurantes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"app",
+														"v1",
+														"restaurantes"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"id\": 5074,\n    \"nome\": \"string\",\n    \"endereco\": {\n      \"logradouro\": \"string\",\n      \"numero\": \"string\",\n      \"complemento\": \"string\",\n      \"cidade\": \"string\",\n      \"cep\": \"string\"\n    },\n    \"horarioFuncionamento\": {\n      \"abertura\": \"10:28:04.714Z\",\n      \"fechamento\": \"13:21:45.191Z\"\n    },\n    \"donoRestaurante\": \"string\",\n    \"tipoRestaurante\": \"PADARIA\"\n  },\n  {\n    \"id\": 5267,\n    \"nome\": \"string\",\n    \"endereco\": {\n      \"logradouro\": \"string\",\n      \"numero\": \"string\",\n      \"complemento\": \"string\",\n      \"cidade\": \"string\",\n      \"cep\": \"string\"\n    },\n    \"horarioFuncionamento\": {\n      \"abertura\": \"10:01:27.234Z\",\n      \"fechamento\": \"01:40:03.205Z\"\n    },\n    \"donoRestaurante\": \"string\",\n    \"tipoRestaurante\": \"PADARIA\"\n  }\n]"
+										}
+									]
+								},
+								{
+									"name": "atualiza Restaurante",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 4508,\n  \"nome\": \"string\",\n  \"endereco\": {\n    \"logradouro\": \"string\",\n    \"numero\": \"string\",\n    \"complemento\": \"string\",\n    \"cidade\": \"string\",\n    \"cep\": \"string\"\n  },\n  \"horarioFuncionamento\": {\n    \"abertura\": \"16:48:39.838Z\",\n    \"fechamento\": \"13:44:49.036Z\"\n  },\n  \"donoRestaurante\": \"string\",\n  \"tipoRestaurante\": \"DELIVERY\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/app/v1/restaurantes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"app",
+												"v1",
+												"restaurantes"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 4508,\n  \"nome\": \"string\",\n  \"endereco\": {\n    \"logradouro\": \"string\",\n    \"numero\": \"string\",\n    \"complemento\": \"string\",\n    \"cidade\": \"string\",\n    \"cep\": \"string\"\n  },\n  \"horarioFuncionamento\": {\n    \"abertura\": \"16:48:39.838Z\",\n    \"fechamento\": \"13:44:49.036Z\"\n  },\n  \"donoRestaurante\": \"string\",\n  \"tipoRestaurante\": \"DELIVERY\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/app/v1/restaurantes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"app",
+														"v1",
+														"restaurantes"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 4508,\n  \"nome\": \"string\",\n  \"endereco\": {\n    \"logradouro\": \"string\",\n    \"numero\": \"string\",\n    \"complemento\": \"string\",\n    \"cidade\": \"string\",\n    \"cep\": \"string\"\n  },\n  \"horarioFuncionamento\": {\n    \"abertura\": \"16:48:39.838Z\",\n    \"fechamento\": \"13:44:49.036Z\"\n  },\n  \"donoRestaurante\": \"string\",\n  \"tipoRestaurante\": \"DELIVERY\"\n}"
+										}
+									]
+								},
+								{
+									"name": "criar Restaurante",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nome\": \"string\",\n  \"endereco\": {\n    \"logradouro\": \"string\",\n    \"numero\": \"string\",\n    \"complemento\": \"string\",\n    \"cidade\": \"string\",\n    \"cep\": \"string\"\n  },\n  \"horarioFuncionamento\": {\n    \"abertura\": \"19:46:09.768Z\",\n    \"fechamento\": \"23:28:54.750Z\"\n  },\n  \"donoRestaurante\": \"string\",\n  \"tipoRestaurante\": \"RESTAURANTE\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/app/v1/restaurantes",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"app",
+												"v1",
+												"restaurantes"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"nome\": \"string\",\n  \"endereco\": {\n    \"logradouro\": \"string\",\n    \"numero\": \"string\",\n    \"complemento\": \"string\",\n    \"cidade\": \"string\",\n    \"cep\": \"string\"\n  },\n  \"horarioFuncionamento\": {\n    \"abertura\": \"19:46:09.768Z\",\n    \"fechamento\": \"23:28:54.750Z\"\n  },\n  \"donoRestaurante\": \"string\",\n  \"tipoRestaurante\": \"RESTAURANTE\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/app/v1/restaurantes",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"app",
+														"v1",
+														"restaurantes"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"id\": 4508,\n  \"nome\": \"string\",\n  \"endereco\": {\n    \"logradouro\": \"string\",\n    \"numero\": \"string\",\n    \"complemento\": \"string\",\n    \"cidade\": \"string\",\n    \"cep\": \"string\"\n  },\n  \"horarioFuncionamento\": {\n    \"abertura\": \"16:48:39.838Z\",\n    \"fechamento\": \"13:44:49.036Z\"\n  },\n  \"donoRestaurante\": \"string\",\n  \"tipoRestaurante\": \"DELIVERY\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8081"
+		}
+	]
+}
